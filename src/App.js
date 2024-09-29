@@ -1,24 +1,36 @@
-import logo from './logo.svg';
+// import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+import React from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { Routes, Route } from "react-router-dom";
 import './App.css';
+import NavBar from "./Components/NavBar";
+import BlogState from "./Context/Blog/BlogState";
+import Home from "./Components/Home";
+import SignUp from "./Components/SignUp";
+import Login from "./Components/Login";
+import BlogDisplay from "./Components/BlogDisplay";
+import AuthorBlogs from "./Components/AuthorBlogs";
+import AllBlogsForAllUser from "./Components/AllBlogsForAllUser";
+import EditBlog from "./Components/EditBlog";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BlogState>
+      <NavBar />
+      <div>
+        <Routes>
+          <Route path="/" element={<AllBlogsForAllUser />} />
+          <Route path="/write" element={<Home />} />
+          {/* <Route path="/blogDisplay" element={<BlogDisplay />} /> */}
+          <Route path="/signUp" element={<SignUp />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/authorBlogs" element={<AuthorBlogs />} />
+          {/* <Route path="/blogs" element={<AllBlogsForAllUser />} /> */}
+          <Route path="/blogs/:id" element={<BlogDisplay />} />
+          <Route path="/blogs/edit/:id" element={<EditBlog />} />
+        </Routes>
+      </div>
+    </BlogState>
   );
 }
 

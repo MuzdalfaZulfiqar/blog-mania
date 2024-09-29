@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +35,182 @@
   to {
     transform: rotate(360deg);
   }
+} */
+
+body{
+  font-family: "Yusei Magic", sans-serif;
+  /* font-weight: 400;
+  font-style: normal; */
+}
+
+.signUpimgDiv,
+.signupformDiv{
+  height: 100vh;
+  width: 40vw;
+}
+
+.signupformDiv{
+  height: 100vh;
+  width: 50vw;
+}
+.signUpimgDiv img{
+  width: 100%;
+  height: 100%;
+  object-position: center;
+  object-fit: cover;
+}
+
+.cardRecipeButton {
+  font-size: 15px;
+  width: 90px;
+  height: 40px;
+  /* margin-left: 99px; */
+  /* background-color: yellow; */
+  /* background-color: #f8c611; */
+  /* border: 1px solid #f8c611; */
+  background-color: #A23E48;
+  border-radius: 9px;
+  margin-top: 10px;
+}
+
+a{
+  text-decoration: none;
+  color: black;
+}
+
+
+.loginNotAllowed{
+  border-bottom: 1px solid black;
+  
+}
+.loginNotAllowed a:hover{
+  border-bottom: 1px solid black;
+  /* color: #f8c611; */
+  color: #A23E48;
+}
+
+.smallLogin{
+  margin-left: 11px;
+}
+
+.input{
+  /* padding: 2px;
+  border: 2px solid black; */
+  border: 0px;
+    background-color: transparent;
+    border-bottom: 2px solid black;
+    border-radius: 0px;
+    transition: border-color 0.3s ease; /* Smooth transition effect for border color */
+}
+
+
+button{
+  background-color: #A23E48;
+}
+
+.publishButton{
+  background-color: #A23E48;
+  color: white;
+  width: auto;
+}
+
+.publishButton:hover{
+  background-color: black;
+  color: white;
+}
+
+.brandName{
+  font-size: 25px;
+  font-weight: 500;
+  
+}
+.writeIcon{
+  font-size: 25px;
+  color: rgb(85, 84, 84);
+}
+.write{
+  color: rgb(85, 84, 84);
+}
+
+.form-control:focus{
+  
+  outline:0;
+  box-shadow: none;
+  border-bottom:3px solid #A23E48;
+}
+.input:focus {
+  outline: 0; /* Removes the default outline */
+  box-shadow: none; /* Removes the default box shadow */
+  border-bottom:3px solid #A23E48; /* Change to your desired color on focus */
+}
+
+/* Style the container for the quote block */
+.cdx-quote__text {
+  border-left: 4px solid #A23E48; /* Blue border for the quote */
+  padding-left: 20px; /* Padding to space out the text from the border */
+  margin: 20px 0; /* Margin to separate from other content */
+  font-style: italic; /* Italicize the text */
+  color: #555; /* Dark gray text color */
+  position: relative; /* For positioning the quote icon */
+  min-height: auto;
+}
+
+/* Add a quote icon before the block */
+.cdx-quote__text::before {
+  content: "\201C"; /* Unicode for the left double quotation mark */
+  font-size: 3rem; /* Size of the quote icon */
+  color: #A23E48; /* Color of the quote icon */
+  position: absolute; /* Absolute positioning */
+  left: -20px; /* Position to the left of the block */
+  top: 10px; /* Adjust vertical position */
+}
+
+
+.cdx-quote__caption{
+  font-size: 0.875rem;
+  color: #A23E48;
+  text-align: center;
+  margin-top: 10px;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.cdx-quote__caption::before{
+ content: "-";
+ color: #A23E48;
+ margin-right: 15px;
+}
+
+.image-tool__caption{
+  font-size: 0.875rem;
+  color: #A23E48;
+  text-align: center;
+  margin-top: 10px;
+  /* font-style: italic; */
+  font-weight: bold;
+  border: 0px;
+  outline: 0;
+  box-shadow: none;
+}
+
+.publishButton a{
+  color: white;
+}
+
+.cardTitle{
+  font-size: 24px;
+}
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.blogImg{
+  width: 245px;
+  height: 163px;
+}
+.blogImg img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
